@@ -1,12 +1,13 @@
-package async.enumFiles.priceFinder;
+package thread.priceFinder;
 
 import async.enumFiles.*;
+import thread.*;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import static async.enumFiles.Currency.USD;
+import static thread.Currency.USD;
 
 /**
  * Created by Vivek Kumar Mishra on 29/08/2018.
