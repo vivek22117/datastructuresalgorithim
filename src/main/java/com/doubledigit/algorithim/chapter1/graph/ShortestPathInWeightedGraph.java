@@ -9,11 +9,11 @@ import java.util.stream.IntStream;
 public class ShortestPathInWeightedGraph {
 
     public static void main(String[] args) {
-        AdjacencyMatrixGraphImpl graphImpl = new AdjacencyMatrixGraphImpl(Graph.GraphType.DIRECTED, 500);
+        AdjacencyMatrixGraphImpl graphImpl = new AdjacencyMatrixGraphImpl(Graph.GraphType.DIRECTED, 20);
 
-        IntStream.range(0, 10000).forEach(e -> {
-            int i = new Random().nextInt(500 - 0) + 0;
-            graphImpl.addWeightedEdge(i, new Random().nextInt(500 - 0) + 0, new Random().nextInt(25 - 0) + 0);
+        IntStream.range(0, 250).forEach(e -> {
+            int i = new Random().nextInt(20 - 0) + 0;
+            graphImpl.addWeightedEdge(i, new Random().nextInt(20 - 0) + 0, new Random().nextInt(25 - 0) + 0);
         });
 
         printAdjacentMatrix(graphImpl.getAdjacentMatrix());
@@ -22,7 +22,7 @@ public class ShortestPathInWeightedGraph {
         System.out.println("Number of connections that vertex 5 has: " + adjacentVertices.size());
 
 //        createDistanceTable(graphImpl, 0);
-        shortestPathInDirectedGraph(graphImpl, 5, 90);
+        shortestPathInDirectedGraph(graphImpl, 5, 12);
     }
 
     private static void shortestPathInDirectedGraph(AdjacencyMatrixGraphImpl graphImpl, int source, int destination) {

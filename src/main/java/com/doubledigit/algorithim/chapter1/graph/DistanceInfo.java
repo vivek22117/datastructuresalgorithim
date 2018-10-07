@@ -22,15 +22,9 @@ public class DistanceInfo {
         return lastVertex;
     }
 
-    public void setLastVertex(Integer lastVertex) {
-        this.lastVertex = lastVertex;
-    }
 
     public Integer getDistance() {
         return distance;
     }
 
-    public void setDistance(Integer distance) {
-        this.distance = distance;
-    }
 }

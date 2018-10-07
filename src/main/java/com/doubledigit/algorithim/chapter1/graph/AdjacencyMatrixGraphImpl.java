@@ -48,7 +48,11 @@ public class AdjacencyMatrixGraphImpl implements Graph {
             throw new IllegalArgumentException("Please provide correct vertex Id..");
         }
 
-        adjacentMatrix[v1][v2] = weight;
+        if(v1 == v2) {
+            adjacentMatrix[v1][v2] = 0;
+        } else {
+            adjacentMatrix[v1][v2] = weight;
+        }
         if(graphType == GraphType.UNDIRECTED){
             adjacentMatrix[v2][v1] = weight;
         }
@@ -61,7 +65,7 @@ public class AdjacencyMatrixGraphImpl implements Graph {
         }
         List<Integer> adjacentVertices = new ArrayList<>();
         IntStream.range(0, numberOfVertices).forEach(e -> {
-            if(adjacentMatrix[v][e] == 1){
+            if(adjacentMatrix[v][e] != 0){
                 adjacentVertices.add(e);
             }
         });
