@@ -1,5 +1,7 @@
 package com.doubledigit.algorithim.chapter1.algorithimChapterOne;
 
+import static java.util.Arrays.sort;
+
 /**
  * Created by Vivek Kumar Mishra on 04/08/2018.
  */

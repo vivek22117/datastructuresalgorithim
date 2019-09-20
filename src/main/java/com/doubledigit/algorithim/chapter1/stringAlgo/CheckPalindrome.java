@@ -15,11 +15,11 @@ public class CheckPalindrome {
             char forwardChar = inputString.charAt(index);
             char reverseChar = inputString.charAt(lastIndex);
 
-            while (forwardChar == ' '){
+            while (forwardChar == '.'){
                 index++;
                 forwardChar = inputString.charAt(index);
             }
-            while (reverseChar == ' '){
+            while (reverseChar == '.'){
                 lastIndex--;
                 reverseChar = inputString.charAt(lastIndex);
             }
@@ -30,13 +30,14 @@ public class CheckPalindrome {
             lastIndex--;
         }
         return true;
-
     }
 
 
     public static void main(String[] args) {
         CheckPalindrome checkPalindrome = new CheckPalindrome();
-        boolean result = checkPalindrome.isPalindrome("Mala ya lam");
-        System.out.println("Given string is Palindrome..? " + result);
+//        boolean result = checkPalindrome.isPalindrome("Mala ya lam");
+        boolean floatResult = checkPalindrome.isPalindrome(String.valueOf(121.321f));
+//        System.out.println("Given string is Palindrome..? " + result);
+        System.out.println("Given float is Palindrome..? " + floatResult);
     }
 }

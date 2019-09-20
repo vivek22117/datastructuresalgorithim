@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by Vivek Kumar Mishra on 05/08/2018.
  */
-public interface Graph {
+interface Graph {
 
     enum GraphType{
         DIRECTED,

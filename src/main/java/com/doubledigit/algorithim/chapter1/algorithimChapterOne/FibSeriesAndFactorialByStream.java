@@ -15,8 +15,12 @@ public class FibSeriesAndFactorialByStream {
 
     public static void main(String[] args) {
         Pair<BigInteger, BigInteger> pair = new Pair<>(BigInteger.ONE, BigInteger.ONE);
-        UnaryOperator<Pair<BigInteger, BigInteger>> f = (x) -> new Pair<>(x.getValue(), x.getKey().add(x.getValue()));
-        UnaryOperator<Pair<BigInteger, BigInteger>> g = y -> new Pair<>(y.getKey().add(BigInteger.valueOf(1)), y.getValue().multiply(y.getKey().add(BigInteger.valueOf(1))));
+        UnaryOperator<Pair<BigInteger, BigInteger>> f = (Pair<BigInteger, BigInteger> x) -> {
+            return new Pair<>(x.getValue(), x.getKey().add(x.getValue()));
+        };
+        UnaryOperator<Pair<BigInteger, BigInteger>> g = (Pair<BigInteger, BigInteger> y) -> {
+            return new Pair<>(y.getKey().add(BigInteger.valueOf(1)), y.getValue().multiply(y.getKey().add(BigInteger.valueOf(1))));
+        };
 
         String fibSeries = Stream.iterate(pair, f).map(Pair::getKey).limit(10).map(BigInteger::toString).collect(Collectors.joining(","));
         System.out.println("Fib Series.. " + fibSeries);
