@@ -5,6 +5,7 @@ import java.lang.reflect.Array;
 public class CircularQueue<T> {
     private static final int SPECIAL_EMPTY_VALUE = -1;
     private static int MAX_SIZE = 40;
+    private int numberOfElements = 0;
 
     private T[] elements;
 
@@ -36,6 +37,7 @@ public class CircularQueue<T> {
         if (headIndex == SPECIAL_EMPTY_VALUE) {
             headIndex = tailIndex;
         }
+        numberOfElements++;
     }
 
     public T dequeue() throws QueueUnderFlowException {
@@ -50,7 +52,12 @@ public class CircularQueue<T> {
         } else {
             headIndex = (headIndex + 1) % elements.length;
         }
+        numberOfElements--;
         return data;
+    }
+
+    public int numberOfElements(){
+        return numberOfElements;
     }
 
     public static class QueueOverFlowException extends Exception {
