@@ -20,8 +20,7 @@ public class StackDataStructure<T> {
             throw new StackOverFlowException();
         }
 
-        Element element = new Element(data, top);
-        top = element;
+        top = new Element(data, top);
         stackSize++;
     }
 

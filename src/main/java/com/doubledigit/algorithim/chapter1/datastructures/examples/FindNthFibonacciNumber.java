@@ -10,10 +10,10 @@ public class FindNthFibonacciNumber {
     }
 
     private static int getNthFib(int n) {
-        int[] lastTwo = {0,1};
-        int counter  = 3;
+        int[] lastTwo = {0, 1};
+        int counter = 3;
 
-        while (counter <= n){
+        while (counter <= n) {
             int nextFib = lastTwo[0] + lastTwo[1];
             lastTwo[0] = lastTwo[1];
             lastTwo[1] = nextFib;

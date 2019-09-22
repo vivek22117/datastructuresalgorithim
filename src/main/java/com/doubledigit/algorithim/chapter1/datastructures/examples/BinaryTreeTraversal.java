@@ -17,7 +17,7 @@ public class BinaryTreeTraversal {
 
         CircularQueue<TreeNode> queue = new CircularQueue<>(TreeNode.class);
         queue.enqueue(root);
-        if (!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             TreeNode node = queue.dequeue();
             processNode(node);
 

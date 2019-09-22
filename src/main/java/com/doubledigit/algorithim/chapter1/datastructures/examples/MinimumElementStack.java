@@ -11,7 +11,7 @@ public class MinimumElementStack {
         int min = data;
 
         if (!minimumStack.isEmpty()) {
-            if (min < minimumStack.peek()) {
+            if (min > minimumStack.peek()) {
                 min = minimumStack.peek();
             }
         }
