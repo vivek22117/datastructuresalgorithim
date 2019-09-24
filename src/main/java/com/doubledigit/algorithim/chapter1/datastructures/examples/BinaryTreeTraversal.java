@@ -45,7 +45,7 @@ public class BinaryTreeTraversal {
             return;
         }
 
-        inOrderDepthFirstTraversal(root.getRightNode());
+        inOrderDepthFirstTraversal(root.getLeftNode());
         processNode(root);
         inOrderDepthFirstTraversal(root.getRightNode());
     }

@@ -35,9 +35,9 @@ public class CheckPalindrome {
 
     public static void main(String[] args) {
         CheckPalindrome checkPalindrome = new CheckPalindrome();
-//        boolean result = checkPalindrome.isPalindrome("Mala ya lam");
-        boolean floatResult = checkPalindrome.isPalindrome(String.valueOf(121.321f));
+        boolean result = checkPalindrome.isPalindrome("Malayalam");
+//        boolean floatResult = checkPalindrome.isPalindrome(String.valueOf(121.321f));
 //        System.out.println("Given string is Palindrome..? " + result);
-        System.out.println("Given float is Palindrome..? " + floatResult);
+        System.out.println("Given float is Palindrome..? " + result);
     }
 }

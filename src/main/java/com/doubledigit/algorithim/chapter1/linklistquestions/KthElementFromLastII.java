@@ -15,7 +15,7 @@ public class KthElementFromLastII {
         System.out.println("Kth element from last is..." + node.data);
     }
 
-    public LinkListImpl initLinkList(){
+    public LinkListImpl initLinkList() {
         linkList = new LinkListImpl();
         linkList.push("Vivek");
         linkList.push("Vijay");
@@ -32,19 +32,19 @@ public class KthElementFromLastII {
         return linkList;
     }
 
-    public LinkListImpl.Node kthElementFromLast(LinkListImpl.Node head, int k){
+    public LinkListImpl.Node kthElementFromLast(LinkListImpl.Node head, int k) {
         LinkListImpl.Node p1 = head;
         LinkListImpl.Node p2 = head;
 
-        for (int i = 0; i< k; i++){
-            if(p1 != null){
+        for (int i = 0; i < k; i++) {
+            if (p1 != null) {
                 p1 = p1.next;
             } else {
                 return null; //out of bound because number of nodes are less than k...
             }
         }
 
-        while (p1 != null){
+        while (p1 != null) {
             p1 = p1.next;
             p2 = p2.next;
         }

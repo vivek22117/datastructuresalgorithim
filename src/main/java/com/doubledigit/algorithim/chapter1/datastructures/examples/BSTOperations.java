@@ -14,7 +14,7 @@ public class BSTOperations {
         }
     }
 
-    public static TreeNode<Employee> insert(TreeNode<Employee> head, TreeNode<Employee> node) {
+    private static TreeNode<Employee> insert(TreeNode<Employee> head, TreeNode<Employee> node) {
         if (head == null) {
             return node;
         }
@@ -27,7 +27,7 @@ public class BSTOperations {
         return head;
     }
 
-    public static TreeNode<Employee> lookup(TreeNode<Employee> head, TreeNode<Employee> search){
+    private static TreeNode<Employee> lookup(TreeNode<Employee> head, TreeNode<Employee> search){
         if(head == null){
             return null;
         }

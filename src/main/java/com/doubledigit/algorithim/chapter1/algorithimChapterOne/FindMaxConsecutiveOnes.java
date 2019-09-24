@@ -10,7 +10,7 @@ public class FindMaxConsecutiveOnes {
     public static void main(String[] args) {
         int N = inputData.length;
         int i = 0;
-        int max_length = 0;
+        int max_length = Integer.MIN_VALUE;
 
         for (int e = 0; e < N; e++) {
             if (inputData[e] == 1) {

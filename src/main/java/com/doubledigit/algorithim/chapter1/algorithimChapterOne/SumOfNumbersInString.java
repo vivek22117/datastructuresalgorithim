@@ -8,10 +8,8 @@ import static java.util.Arrays.sort;
 public class SumOfNumbersInString {
 
     private static String inputData = "sdfse567idsi23iisodfif23";
-    static int[] inputElements = {4, 3, 2, 4, 2, 2, 4, 1, 1, 1, 1, 1, 3, 3, 0, 0, 0, 0, 3, 3, 3, 4, 4, 4};
 
     public static void main(String[] args) {
-        getIndexOfLowestOccurrencesInArrayElements(inputElements);
         int N = inputData.length();
         int sum = 0;
         int count = 0;
