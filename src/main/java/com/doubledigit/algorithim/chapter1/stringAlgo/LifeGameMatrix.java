@@ -56,6 +56,7 @@ public class LifeGameMatrix {
 
     private static void printGenMatrix(int[][] genMatrix) {
         for (int i = 0; i < genMatrix.length; i++) {
+            System.out.print("|");
             for (int j = 0; j < genMatrix[i].length; j++) {
                 System.out.print(genMatrix[i][j] + "|");
             }

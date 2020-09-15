@@ -32,6 +32,6 @@ public class LongestPalindromeSubStringInGivenString {
             leftIndx--;
             rightIndx++;
         }
-        return new int[]{leftIndx + 1, rightIndx};
+        return new int[]{leftIndx + 1, rightIndx};           //so that we pick the correct left and right index for substring
     }
 }

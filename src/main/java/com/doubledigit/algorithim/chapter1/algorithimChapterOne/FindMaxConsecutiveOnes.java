@@ -6,6 +6,8 @@ package com.doubledigit.algorithim.chapter1.algorithimChapterOne;
 public class FindMaxConsecutiveOnes {
 
     private static int[] inputData = {0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0};
+//    private static int[] inputData = {0, 1, 1};
+//    private static int[] inputData = {1, 0, 1};
 
     public static void main(String[] args) {
         int N = inputData.length;

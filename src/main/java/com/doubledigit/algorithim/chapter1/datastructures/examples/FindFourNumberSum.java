@@ -7,8 +7,8 @@ import java.util.List;
 
 //input: [3, 6, 9, 7, 2, 4, 8, 1], output: []
 public class FindFourNumberSum {
-    private static final int[] GIVEN_ARRAY = {13, 6, 9, 7, 12, 4, 8, 1};
-    private static final int TARGET = 22;
+    private static final int[] GIVEN_ARRAY = {1, 6, 9, 7, 12, 4, 8, 2};
+    private static final int TARGET = 21;
 
 
     public static void main(String[] args) {
@@ -24,8 +24,8 @@ public class FindFourNumberSum {
         int N = givenArray.length;
         List<Integer[]> result = new ArrayList<>();
 
-        for (int i = 0; i < N; i++) {
-            for (int k = i + 1; k < N; k++) {
+        for (int i = 0; i < N -3; i++) {
+            for (int k = i + 1; k < N -2; k++) {
                 int currentSum = givenArray[i] + givenArray[k];
                 int leftIndx = k + 1;
                 int rightIndx = N - 1;

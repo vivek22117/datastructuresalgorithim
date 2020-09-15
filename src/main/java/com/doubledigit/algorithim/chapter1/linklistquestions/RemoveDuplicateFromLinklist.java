@@ -45,7 +45,7 @@ public class RemoveDuplicateFromLinklist {
         while (current != null){
             LinkListImpl.Node runner = current;
             while (runner.next != null){
-                if(runner.next.data == current.data){
+                if(runner.next.data.equals(current.data)){
                     runner.next = runner.next.next;
                 }else {
                     runner = runner.next;

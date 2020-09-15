@@ -14,12 +14,12 @@ public class FindThreeLargestNumbers {
 
     //complexity time: O(n) | space: O(1)
     private static int[] findThreeLargestNum(int[] inputData) {
-        int[] threelargestNumber = {Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE};
+        int[] threeLargestNumber = {Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE};
 
-        for (int i : inputData) {
-            updateThreeLargestNumber(threelargestNumber, i);
+        for (int value : inputData) {
+            updateThreeLargestNumber(threeLargestNumber, value);
         }
-        return threelargestNumber;
+        return threeLargestNumber;
     }
 
     private static void updateThreeLargestNumber(int[] threelargestNumber, int num) {
@@ -32,9 +32,9 @@ public class FindThreeLargestNumbers {
         }
     }
 
-    private static void shiftLargestNumbers(int[] threelargestNumber, int num, int indx) {
-        for (int i = 0; i <= indx; i++) {
-            if (i == indx) {
+    private static void shiftLargestNumbers(int[] threelargestNumber, int num, int index) {
+        for (int i = 0; i <= index; i++) {
+            if (i == index) {
                 threelargestNumber[i] = num;
             } else {
                 threelargestNumber[i] = threelargestNumber[i + 1];

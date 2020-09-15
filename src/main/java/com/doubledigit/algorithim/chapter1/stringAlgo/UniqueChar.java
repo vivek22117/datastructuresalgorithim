@@ -3,7 +3,7 @@ package com.doubledigit.algorithim.chapter1.stringAlgo;
 /**
  * Created on 23/09/2018.
  *
- * Create an algorithim to determine if a string has all unique characters.
+ * Create an algorithm to determine if a string has all unique characters.
  */
 public class UniqueChar {
 
@@ -24,7 +24,7 @@ public class UniqueChar {
     public static void main(String[] args) {
         UniqueChar uniqueChar = new UniqueChar();
 
-        boolean result = uniqueChar.isUniqueCharacters("Mishra");
+        boolean result = uniqueChar.isUniqueCharacters("Mishraa");
         System.out.println(result);
     }
 }
