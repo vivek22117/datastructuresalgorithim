@@ -36,8 +36,43 @@ public class CheckPalindrome {
     public static void main(String[] args) {
         CheckPalindrome checkPalindrome = new CheckPalindrome();
         boolean result = checkPalindrome.isPalindrome("Malayalam");
-//        boolean floatResult = checkPalindrome.isPalindrome(String.valueOf(121.321f));
-//        System.out.println("Given string is Palindrome..? " + result);
-        System.out.println("Given float is Palindrome..? " + result);
+        boolean floatResult = checkPalindrome.isDigitPalindrome(String.valueOf(301.003f));
+        System.out.println("Given string is Palindrome..? " + result);
+        System.out.println("Given float is Palindrome..? " + floatResult);
     }
+
+    private boolean isDigitPalindrome(String valueOf) {
+        if(valueOf.length() == 0) {
+            return false;
+        }
+
+        int startIndx = 0;
+        int lastIndx = valueOf.length() - 1;
+
+        while (startIndx < lastIndx) {
+            char forwardChar = valueOf.charAt(startIndx);
+            char backwardChar = valueOf.charAt(lastIndx);
+
+            while (forwardChar == '.') {
+                startIndx++;
+                forwardChar = valueOf.charAt(startIndx);
+            }
+
+            while (backwardChar == '.') {
+                lastIndx--;
+                backwardChar = valueOf.charAt(lastIndx);
+            }
+
+            if(forwardChar != backwardChar) {
+                return false;
+            }
+
+            startIndx++;
+            lastIndx--;
+        }
+
+        return true;
+    }
+
+
 }
