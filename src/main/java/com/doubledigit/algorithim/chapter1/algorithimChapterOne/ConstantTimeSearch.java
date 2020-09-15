@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * Created by Vivek Kumar Mishra on 04/08/2018.
  *
- * This algorithim is used to search minimum element from a list of elements in O(1) times.
+ * This algorithm is used to search minimum element from a list of elements in O(1) times.
  * Implemented using STACK
  */
 public class ConstantTimeSearch {

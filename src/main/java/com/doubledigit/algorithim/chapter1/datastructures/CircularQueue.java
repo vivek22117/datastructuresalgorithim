@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 
 public class CircularQueue<T> {
     private static final int SPECIAL_EMPTY_VALUE = -1;
-    private static int MAX_SIZE = 40;
+    private static int MAX_SIZE = 44;
     private int numberOfElements = 0;
 
     private T[] elements;
@@ -13,7 +13,14 @@ public class CircularQueue<T> {
     private int tailIndex = SPECIAL_EMPTY_VALUE;
 
     public CircularQueue(Class<T> clazz) {
-        elements = (T[]) Array.newInstance(clazz, MAX_SIZE);
+        this.elements = (T[]) Array.newInstance(clazz, MAX_SIZE);
+    }
+
+    public CircularQueue(Class<T> clazz, Integer size) {
+        if (size == null || size <= 0) {
+            throw new IllegalArgumentException();
+        }
+        this.elements = (T[]) Array.newInstance(clazz, size);
     }
 
     public boolean isEmpty() {
@@ -56,7 +63,7 @@ public class CircularQueue<T> {
         return data;
     }
 
-    public int numberOfElements(){
+    public int numberOfElements() {
         return numberOfElements;
     }
 
