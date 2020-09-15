@@ -29,8 +29,8 @@ public class StackDataStructure<T> {
             throw new StackUnderFlowException();
         }
 
-        T data = top.getData();
-        top = top.getNext();
+        T data = top.data;
+        top = top.next;
 
         stackSize--;
         return data;
@@ -40,10 +40,8 @@ public class StackDataStructure<T> {
         if (stackSize == 0) {
             throw new StackUnderFlowException();
         }
-
-        return top.getData();
+        return top.data;
     }
-
 
     public static class Element<T> {
         private T data;
@@ -51,22 +49,6 @@ public class StackDataStructure<T> {
 
         public Element(T data, Element next) {
             this.data = data;
-            this.next = next;
-        }
-
-        public T getData() {
-            return data;
-        }
-
-        public void setData(T data) {
-            this.data = data;
-        }
-
-        public Element getNext() {
-            return next;
-        }
-
-        public void setNext(Element next) {
             this.next = next;
         }
     }
