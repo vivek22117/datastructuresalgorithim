@@ -4,6 +4,7 @@ package com.doubledigit.algorithim.chapter1.algorithimChapterOne.graph;
  * Created by Vivek Kumar Mishra on 26/09/2018.
  */
 public class IdenticalBST {
+    private String value;
 
     public boolean sameTree(Node<Integer> one, Node<Integer> two){
         if(one == null && two == null){
@@ -23,6 +24,7 @@ public class IdenticalBST {
     }
 
     public static class Node<T>{
+
         private T element;
         private Node<T> leftNode;
         private Node<T> rightNode;
