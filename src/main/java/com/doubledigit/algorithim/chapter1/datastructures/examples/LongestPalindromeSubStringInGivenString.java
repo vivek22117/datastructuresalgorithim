@@ -1,10 +1,11 @@
 package com.doubledigit.algorithim.chapter1.datastructures.examples;
 
 
-//input: "xhrystulutsnypo" | output: "stulluts"
+//input: "xhrystulutsnypo" | output: "stuluts"
 public class LongestPalindromeSubStringInGivenString {
 
-    private static final String inputData = "xhxrystlunypr";
+//    private static final String inputData = "xhxrystlunypr";
+    private static final String inputData = "xhrystulutsnypo";
 
     public static void main(String[] args) {
         String longestSubStringPalindrome = getLongestSubStringPalindrome(inputData);

@@ -43,6 +43,7 @@ public class MaxSumFromSubsetArrayNoAdjacent {
         maxSums[1] = Math.max(inputData[0], inputData[1]);
         for (int i = 2; i< inputData.length; i++){
             maxSums[i] = Math.max(maxSums[i-1], maxSums[i-2] + inputData[i]);
+
         }
 
         return maxSums[inputData.length -1];
