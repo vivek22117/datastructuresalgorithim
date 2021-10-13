@@ -1,6 +1,8 @@
 package Algo;
 
 
+import java.util.Arrays;
+
 import static java.util.Arrays.sort;
 
 public class LowestOccurrenceInArrayElement {
@@ -11,7 +13,7 @@ public class LowestOccurrenceInArrayElement {
     }
 
     private static void getIndexOfLowestOccurrencesInArrayElements(int[] inputElements) {
-        sort(inputElements);
+        Arrays.sort(inputElements);
         int[][] output = new int[2][3];
         int i = 0;
         while (i < inputElements.length) {
