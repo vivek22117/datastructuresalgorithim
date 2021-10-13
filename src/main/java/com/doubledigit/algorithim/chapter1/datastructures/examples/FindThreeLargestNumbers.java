@@ -22,13 +22,13 @@ public class FindThreeLargestNumbers {
         return threeLargestNumber;
     }
 
-    private static void updateThreeLargestNumber(int[] threelargestNumber, int num) {
-        if (num > threelargestNumber[2]) {
-            shiftLargestNumbers(threelargestNumber, num, 2);
-        } else if (num > threelargestNumber[1]) {
-            shiftLargestNumbers(threelargestNumber, num, 1);
-        } else if (num > threelargestNumber[0]) {
-            shiftLargestNumbers(threelargestNumber, num, 0);
+    private static void updateThreeLargestNumber(int[] threeLargestNumber, int num) {
+        if (num > threeLargestNumber[2]) {
+            shiftLargestNumbers(threeLargestNumber, num, 2);
+        } else if (num > threeLargestNumber[1]) {
+            shiftLargestNumbers(threeLargestNumber, num, 1);
+        } else if (num > threeLargestNumber[0]) {
+            shiftLargestNumbers(threeLargestNumber, num, 0);
         }
     }
 
