@@ -1,4 +1,4 @@
-package com.google.algo.ds;
+package com.google.algo;
 
 public class SumProductOfArray {
 
