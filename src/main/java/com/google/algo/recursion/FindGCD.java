@@ -1,4 +1,4 @@
-package com.google.algo;
+package com.google.algo.recursion;
 
 public class FindGCD {
 
