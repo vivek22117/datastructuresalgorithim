@@ -17,7 +17,7 @@ public class LifeGameMatrix {
 
         printGenMatrix(currentGen);
         int[][] updatedGenMatrix = LifeGameMatrix.updatedCurrentGen(currentGen);
-        System.out.println("After Updation...");
+        System.out.println("After Updating...");
         printGenMatrix(updatedGenMatrix);
         int[][] nextGenMatrix = getNextGenMatrix(updatedGenMatrix);
         System.out.println("Getting next Gen Matrix....");
