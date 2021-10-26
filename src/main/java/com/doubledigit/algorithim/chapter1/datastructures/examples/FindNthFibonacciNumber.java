@@ -2,7 +2,7 @@ package com.doubledigit.algorithim.chapter1.datastructures.examples;
 
 public class FindNthFibonacciNumber {
 
-    private static final int N = 4;
+    private static final int N = 10;
 
     public static void main(String[] args) {
         int nthFib = getNthFib(N);
