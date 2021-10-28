@@ -46,7 +46,7 @@ public class LinkListDataStructure<T> {
         }
     }
 
-    class Node<E> {
+    public class Node<E> {
         private E data;
         Node<E> next;
 
