@@ -4,6 +4,7 @@ public class LinkListDSWithHeadAndTail<T> {
     private volatile Node<T> head = null;
     private volatile Node<T> tail = null;
     private int size;
+    private int numberOfNodes;
 
     public Node<T> getHead() {
         return head;
@@ -15,6 +16,20 @@ public class LinkListDSWithHeadAndTail<T> {
 
     public boolean isEmpty() {
         return head == null;
+    }
+
+    public int countNodes() {
+        if(head == null) {
+            return 0;
+        } else {
+            Node<T> curr = head;
+            int counter = 0;
+            while (curr != null) {
+                curr = curr.next;
+                counter++;
+            }
+            return counter;
+        }
     }
 
     public void append(T data) {
