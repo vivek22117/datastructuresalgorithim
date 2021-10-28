@@ -24,8 +24,8 @@ public class LinkListImplementationForMachine {
         machineLinkList.append(machine);
     }
 
-    public void getHead(){
-        machineLinkList.getHead();
+    public LinkListDataStructure<Machine>.Node<Machine> getHead(){
+        return machineLinkList.getHead();
     }
 
 
