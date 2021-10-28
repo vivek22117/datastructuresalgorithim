@@ -66,11 +66,11 @@ public class PointsWithInDistance {
 
         //Helper method to calculate the distance from another point....
         public double getDistance(Point otherPoint){
-            return Math.sqrt(Math.pow(otherPoint.x -x, 2) + Math.pow(otherPoint.y - y, 2));
+            return Math.sqrt(Math.pow(otherPoint.x - x, 2) + Math.pow(otherPoint.y - y, 2));
         }
 
         public boolean isWithinDistance(Point otherPoint, double distance){
-            if(Math.abs(otherPoint.x -x) > distance  || Math.abs(otherPoint.y - y) > distance){
+            if(Math.abs(otherPoint.x - x) > distance  || Math.abs(otherPoint.y - y) > distance){
                 return false;
             }
             return getDistance(otherPoint) <= distance;
