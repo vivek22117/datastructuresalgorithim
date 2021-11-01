@@ -15,12 +15,12 @@ public class MaxAreaWaterTank {
             return -1;
         }
 
-        int max = 0;
+        int maxArea = 0;
         int left = 0;
         int right = nums.length - 1;
 
         while(left < right) {
-            max = Math.max(max, Math.min(nums[left], nums[right]) * (right - left));
+            maxArea = Math.max(maxArea, Math.min(nums[left], nums[right]) * (right - left));
             if(nums[left] < nums[right]) {
                 left++;
             } else {
@@ -28,6 +28,6 @@ public class MaxAreaWaterTank {
             }
         }
 
-        return max;
+        return maxArea;
     }
 }
