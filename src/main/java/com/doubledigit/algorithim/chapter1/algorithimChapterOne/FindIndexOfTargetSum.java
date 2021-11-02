@@ -2,6 +2,7 @@ package com.doubledigit.algorithim.chapter1.algorithimChapterOne;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.function.ToIntFunction;
 import java.util.stream.IntStream;
 
 import static java.lang.Double.compare;
@@ -19,8 +20,11 @@ public class FindIndexOfTargetSum {
     public static void main(String[] args) {
         int N = inputData.length;
         int[][] copyOf2DArray = createCopyOf2DArray(inputData);
-        Arrays.sort(copyOf2DArray, Comparator.comparingInt((int[] o) -> {
-            return o[0];
+        Arrays.sort(copyOf2DArray, Comparator.comparingInt(new ToIntFunction<int[]>() {
+            @Override
+            public int applyAsInt(int[] o) {
+                return o[0];
+            }
         }));
 
         int[] result = new int[2];
