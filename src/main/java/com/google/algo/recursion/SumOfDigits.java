@@ -4,7 +4,7 @@ public class SumOfDigits {
 
     public static void main(String[] args) {
         SumOfDigits sumOfDigits = new SumOfDigits();
-        int output = sumOfDigits.findSum(-101);
+        int output = sumOfDigits.findSum(101);
         System.out.println(output);
     }
 
