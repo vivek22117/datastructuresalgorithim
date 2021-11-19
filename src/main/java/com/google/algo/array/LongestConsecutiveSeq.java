@@ -4,7 +4,7 @@ import java.util.HashSet;
 
 public class LongestConsecutiveSeq {
 
-    private static int[] input = {4, 200, 34, 1, 0, 300, 2, 33, 3};
+    private static int[] input = {4, 200, 34, 1, 0, 300, 2, 33, 3, 101, 102, 109, 111, 110, 103, 104, 107, 106, 108};
 
     public static void main(String[] args) {
         LongestConsecutiveSeq sequence = new LongestConsecutiveSeq();
@@ -41,7 +41,7 @@ public class LongestConsecutiveSeq {
         return max_sequence;
     }
 
-//  This solution is O(n2) OR O(n3)
+//  This solution is O(n3)
     public int longestConsecutive(int[] input) {
         int max_sequence = 0;
 
