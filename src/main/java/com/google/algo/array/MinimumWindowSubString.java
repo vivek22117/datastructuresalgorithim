@@ -71,7 +71,8 @@ public class MinimumWindowSubString {
              if((j - i) < minLength) {
                  leftIndex = i;
                  rightIndex = j;
-                 minLength = j - i;
+                 minLength = j - i + 1;
+                 System.out.println(minLength);
                  found = true;
              }
 
