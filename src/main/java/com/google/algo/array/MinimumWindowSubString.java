@@ -16,6 +16,10 @@ public class MinimumWindowSubString {
 
     public static void main(String[] args) {
 
+        MinimumWindowSubString window = new MinimumWindowSubString();
+        String result = window.findMinimumWindow(source, target);
+        System.out.println(result);
+
     }
 
     public String findMinimumWindow(String source, String target) {
@@ -33,11 +37,13 @@ public class MinimumWindowSubString {
         int count = targetFrequency.size();
 
         int minLength = Integer.MAX_VALUE;
+        int leftIndex = 0;
+        int rightIndex = 0;
 
         boolean found = false;
 
-        while (j < target.length()) {
-             char ch = target.charAt(j);
+        while (j < source.length()) {
+             char ch = source.charAt(j);
 
              if(targetFrequency.containsKey(ch)) {
                  targetFrequency.put(ch, targetFrequency.getOrDefault(ch, 0) - 1);
@@ -62,14 +68,16 @@ public class MinimumWindowSubString {
                  i++;
              }
 
-             if((j - 1) < minLength) {
+             if((j - i) < minLength) {
+                 leftIndex = i;
+                 rightIndex = j;
                  minLength = j - i;
                  found = true;
              }
 
         }
 
-        return !found ? "" : source.substring(i - 1, j);
+        return !found ? "" : source.substring(leftIndex - 1, rightIndex);
 
     }
 }
