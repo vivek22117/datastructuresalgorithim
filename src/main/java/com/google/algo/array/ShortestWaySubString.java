@@ -14,7 +14,7 @@ import javax.sound.midi.Soundbank;
 public class ShortestWaySubString {
 
     private static String sourceString = "abc";
-    private static String targetString = "acb";
+    private static String targetString = "acbac";
 
     public static void main(String[] args) {
         ShortestWaySubString subString = new ShortestWaySubString();
