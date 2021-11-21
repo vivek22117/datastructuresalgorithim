@@ -1,16 +1,19 @@
 package com.google.algo.other;
 
+import java.util.Arrays;
+
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int[] input = {4, 8, 11, 19, 21, 26, 33, 38, 44};
+        int[] input = {14, 8, 11, 19, 21, 26, 4, 38, 44};
 
         BinarySearch search = new BinarySearch();
-        int result = search.findElement(input, 4);
+        int result = search.findElement(input, 19);
         System.out.println(result);
     }
 
     public int findElement(int[] nums, int target) {
+        Arrays.sort(nums);
         int min = 0;
         int max = nums.length -1;
 
