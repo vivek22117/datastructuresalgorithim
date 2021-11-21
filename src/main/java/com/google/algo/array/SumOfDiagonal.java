@@ -6,7 +6,11 @@ public class SumOfDiagonal {
 
     public static void main(String[] args) {
         SumOfDiagonal diagonalSum = new SumOfDiagonal();
-        int[][] input = {{2, 5, 7}, {0, 7, 1}, {4, 6, 8}};
+        int[][] input = {
+                {2, 5, 7},
+                {0, 7, 1},
+                {4, 6, 8}
+        };
         int result = diagonalSum.sumDiagonal(input);
         System.out.println(result);
     }
