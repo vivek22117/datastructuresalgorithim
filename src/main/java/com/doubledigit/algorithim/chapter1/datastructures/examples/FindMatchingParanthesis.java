@@ -18,6 +18,7 @@ public class FindMatchingParanthesis {
         openingParenthesisSet.addAll(matchinParenthesisMap.values());
     }
 
+    // {(([]))}{}
     public static boolean hasMatchingParenthesis(String inputData) {
         try {
             StackDataStructure<Character> parentStack = new StackDataStructure<>();
