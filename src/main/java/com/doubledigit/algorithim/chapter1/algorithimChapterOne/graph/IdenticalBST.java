@@ -23,6 +23,24 @@ public class IdenticalBST {
         return false;
     }
 
+    public boolean isSameTree(Node<Integer> node1, Node<Integer> node2) {
+        if(node1 == null && node2 == null) {
+            return false;
+        }
+
+        if(node1 == null) {
+            return false;
+        } else if(node2 == null) {
+            return false;
+        }
+
+        if(isSameTree(node1.leftNode, node2.leftNode) && isSameTree(node1.rightNode, node2.rightNode)) {
+            return node1.getElement().equals(node2.getElement());
+        }
+
+        return false;
+    }
+
     public static class Node<T>{
 
         private T element;
