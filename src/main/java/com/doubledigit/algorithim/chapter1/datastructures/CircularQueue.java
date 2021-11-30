@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 
 public class CircularQueue<T> {
     private static final int SPECIAL_EMPTY_VALUE = -1;
-    private static int MAX_SIZE = 44;
+    private static int MAX_SIZE = 55;
     private int numberOfElements = 0;
 
     private T[] elements;
