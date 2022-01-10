@@ -26,4 +26,21 @@ public class LongestCommonPrefix {
 
         return strs[0];
     }
+
+    private String findCommonPrefix(String[] words) {
+        if(words.length == 0) {
+            return "";
+        }
+
+        for(int i = 0; i < words[0].length(); i++){
+            char ch = words[0].charAt(i);
+            for(int j = 1; j < words.length; j++) {
+                if(i == words[j].length() || ch != words[j].charAt(i)) {
+                    return words[0].substring(0, i);
+                }
+            }
+        }
+
+        return words[0];
+    }
 }
